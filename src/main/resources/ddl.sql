@@ -1,4 +1,4 @@
-create table if not exists aelaort_telegram_pack.quotes
+create table if not exists quotes
 (
     id serial primary key,
     rating            integer,
@@ -11,4 +11,4 @@ create table if not exists aelaort_telegram_pack.quotes
 );
 
 CREATE EXTENSION IF NOT EXISTS pg_trgm;
-create index if not exists quotes_gin_trgm_idx on aelaort_telegram_pack.quotes using gin (quote public.gin_trgm_ops);
+create index if not exists quotes_gin_trgm_idx on quotes using gin (quote public.gin_trgm_ops);
