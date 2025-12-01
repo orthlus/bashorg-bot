@@ -1,12 +1,12 @@
 package art.aelaort.bash;
 
-import art.aelaort.SpringLongPollingBot;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import art.aelaort.bash.exceptions.QuoteNotFoundException;
 import art.aelaort.bash.models.QuoteFile;
 import art.aelaort.bash.models.QuoteFileUrlId;
+import art.aelaort.telegram.SimpleLongPollingBot;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.methods.AnswerInlineQuery;
@@ -26,12 +26,12 @@ import java.io.InputStream;
 import java.util.*;
 import java.util.stream.IntStream;
 
-import static art.aelaort.TelegramClientHelpers.execute;
+import static art.aelaort.telegram.client.TelegramClientHelpers.execute;
 
 @Slf4j
 @Component
 @RequiredArgsConstructor
-public class BashBot implements SpringLongPollingBot {
+public class BashBot implements SimpleLongPollingBot {
 	private final TelegramClient bashTelegramClient;
 	private final DataService dataService;
 	private final TelegramPhotoService telegramPhotoService;

@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 
-import static art.aelaort.TelegramClientHelpers.execute;
+import static art.aelaort.telegram.client.TelegramClientHelpers.execute;
 
 @Slf4j
 @Component

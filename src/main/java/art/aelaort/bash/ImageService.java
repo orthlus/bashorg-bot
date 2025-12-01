@@ -1,11 +1,11 @@
 package art.aelaort.bash;
 
+import art.aelaort.bash.models.QuoteFile;
 import ij.IJ;
 import ij.ImagePlus;
 import ij.process.ImageProcessor;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
-import art.aelaort.bash.models.QuoteFile;
 import org.apache.commons.text.WordUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
